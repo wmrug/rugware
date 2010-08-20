@@ -1,0 +1,8 @@
+- @page_title = "Edit #{@event.title}"
+= form_for @event do |f|
+  %fieldset
+    %legend= @page_title
+    %ul
+      = render :partial => "form", :locals => {:f => f}
+      %li
+        = submit_tag "Save event"

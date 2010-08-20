@@ -1,0 +1,11 @@
+%li
+  = f.label :email
+  = f.text_field :email
+%li
+  = f.label :password 
+  -if action_name == "edit"
+    %i (leave blank if you don't want to change it)
+  = f.password_field :password
+%li
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation

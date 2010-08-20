@@ -1,0 +1,13 @@
+- @page_title = "Resend unlock instructions"
+%h2=@page_title
+= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
+  = devise_error_messages!
+  %fieldset
+    %legend=@page_title
+    %ul
+      %li
+        = f.label :email
+        = f.text_field :email
+      %li
+        = f.submit "Resend unlock instructions"
+= render :partial => "devise/shared/links"

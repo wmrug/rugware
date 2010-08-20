@@ -1,0 +1,12 @@
+!!! 5
+%head
+  %title Rugware
+  = stylesheet_link_tag :all
+  = javascript_include_tag :defaults
+  = csrf_meta_tag
+%body
+  - if flash[:error]
+    %div= flash[:error]
+  -elsif flash[:success]
+    %div= flash[:success]
+  = yield

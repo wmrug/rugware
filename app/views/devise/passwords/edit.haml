@@ -1,0 +1,17 @@
+- @page_title = "Change your password"
+%h2= @page_title
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  %fieldset
+    %legend= @page_title
+    = devise_error_messages!
+    = f.hidden_field :reset_password_token
+    %ul
+      %li
+        = f.label :password
+        = f.password_field :password
+      %li
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation
+      %li
+        = f.submit "Change my password"
+= render :partial => "devise/shared/links"

@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  database: rugware-dev
+test:
+  adapter: postgresql
+  database: rugware-test
+production:
+  adapter: postgresql
+  database: rugware
+
