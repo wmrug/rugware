@@ -8,7 +8,6 @@ class Event < ActiveRecord::Base
   private
   
     def end_time_should_be_after_start_time
-      self.attributes.inspect
       errors.add(:end_time, "Must be after start time") if start_time && end_time && start_time > end_time
     end
   
