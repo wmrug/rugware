@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   load_and_authorize_resource
   
+  def index
+    @events = Event.all
+  end
+  
   def create
     @event = Event.new(params[:event])
     if @event.save
@@ -18,6 +22,11 @@ class EventsController < ApplicationController
       flash[:error] = "Could not save"
       render :action => "edit"
     end
+  end
+  
+  def destroy
+    @event.destroy
+    redirect_to events_path
   end
   
 end

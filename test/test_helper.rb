@@ -5,3 +5,7 @@ require 'factory'
 
 class ActiveSupport::TestCase
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
