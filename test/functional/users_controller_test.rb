@@ -15,6 +15,12 @@ class UsersControllerTest < ActionController::TestCase
       assert_response :success
     end
     
+    should "not be able to see the profile page" do
+      get :profile
+      assert_response :redirect
+      assert_redirected_to new_user_session_path
+    end
+    
     context "when logged in as a non-admin user" do
       
       setup do

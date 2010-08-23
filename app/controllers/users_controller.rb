@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!, :only => :profile
   load_and_authorize_resource
   
   def index
@@ -12,7 +13,6 @@ class UsersController < ApplicationController
   end
   
   def profile
-    redirect_to "/" unless current_user
     @user = current_user
     render :action => "show"
   end
