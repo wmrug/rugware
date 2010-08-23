@@ -3,6 +3,15 @@ Rugware::Application.routes.draw do
 
   root :to => "home#index"
   resources :events
+  resources :users do
+    collection do
+      get :profile
+    end
+    member do
+      put :make_admin
+    end
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

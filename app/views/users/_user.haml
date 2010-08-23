@@ -1,0 +1,15 @@
+%li
+  %ul
+    %li
+      %pre
+        =user.inspect
+    %li
+      =form_for user, :url => make_admin_user_path(user), :html => {:method => "put"} do |f|
+        %fieldset
+          %legend== Make #{user.email} admin?
+          %ul
+            %li
+              = f.check_box :admin
+            %li
+              = submit_tag "Update"
+            

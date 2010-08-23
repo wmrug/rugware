@@ -6,7 +6,7 @@ Factory.define :event do |e|
 end
 
 Factory.define :user do |u|
-  u.sequence(:email) {|n| "test@example.com"}
+  u.sequence(:email) {|n| "test#{n}@example.com"}
   u.password "password"
   u.password_confirmation "password"
 end
