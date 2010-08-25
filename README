@@ -1,10 +1,12 @@
-== Welcome to RUGware
+Welcome to RUGware
+==================
 
 RUGware is an app to manage the WMRUG (West Midlands Ruby User Group) website.
 
 www.wmrug.org
 
-= Requirements
+Requirements
+------------
 
 * Ruby 1.9.2 (e.g. rvm install 1.9.2, rvm use 1.9.2, ruby -v)
 * PostgreSQL 8.4 (e.g. port install postgres84)
