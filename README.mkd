@@ -9,6 +9,7 @@ Requirements
 ------------
 
 * Ruby 1.9.2 (e.g. rvm install 1.9.2, rvm use 1.9.2, ruby -v)
+* Rails 3 (e.g. gem install rails --pre)
 * PostgreSQL 8.4 (e.g. port install postgres84 postgresql84-server)
 
 See also:
