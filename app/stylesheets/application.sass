@@ -1,0 +1,43 @@
+=rounded-corners
+  border-radius: 0.5em
+  -webkit-border-radius: 0.5em
+  -moz-border-radius: 0.5em
+
+body
+  font-family: Verdana, Arial, "Helvetica Neue", sans-serif
+  text-align: center
+  
+.clear
+  clear: both  
+
+#content
+  width: 960px
+  margin: 20px auto
+  padding: 20px
+  text-align: left
+  border: 1px solid black
+  +rounded-corners
+  
+#banner
+  height: 200px
+  background-color: red
+  
+#resources
+  float: right
+  ul#list_of_resources
+    li.twitter
+      list-style-image: url(/images/icons/twitter.png)
+    li.mailing_list
+      list-style-image: url(/images/icons/mail.png)
+    li.meetup
+      list-style-image: url(/images/icons/meetup.png)
+    li.facebook
+      list-style-image: url(/images/icons/facebook.png)
+    li.irc
+      list-style-image: url(/images/icons/irc.gif)      
+    li.github
+      list-style-image: url(/images/icons/github.png)
+    li.linkedin
+      list-style-image: url(/images/icons/linkedin.png)      
+    li.rugs
+      list-style-image: url(/images/icons/ruby.png)
