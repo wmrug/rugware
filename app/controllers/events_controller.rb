@@ -2,7 +2,12 @@ class EventsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @events = Event.all
+    @past_events     = Event.past
+    @upcoming_events = Event.upcoming
+  end
+  
+  def new
+    @event = Event.new
   end
   
   def create

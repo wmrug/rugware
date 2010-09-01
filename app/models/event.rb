@@ -4,6 +4,13 @@ class Event < ActiveRecord::Base
   validates_uniqueness_of :title, :case_sensitive => false
   
   validate :end_time_should_be_after_start_time
+
+  scope :past, lambda {
+    where("events.start_time IS NOT NULL AND events.start_time <= ?", Time.zone.now)
+  } 
+  scope :upcoming, lambda {
+    where("events.start_time IS NOT NULL AND events.start_time > ?", Time.zone.now)
+  } 
   
   private
   
