@@ -1,21 +1,21 @@
 #countdown_dashboard {
-  height: 110px;
+  height: 55px;
 }
 
 .dash {
-  width: 110px;
-  height: 114px;
-  background: transparent url('../images/countdown/dash.png') 0 0 no-repeat;
+  width: 55px;
+  height: 57px;
+  background: transparent url('../images/countdown/dash_small.png') 0 0 no-repeat;
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
   position: relative;
 }
 
 .dash .digit {
-  font-size: 55pt;
+  font-size: 27pt;
   font-weight: bold;
   float: left;
-  width: 55px;
+  width: 27px;
   text-align: center;
   font-family: Times;
   color: #555;
@@ -26,9 +26,9 @@
   position: absolute;
   display: block;
   bottom: 0px;
-  right: 6px;
-  font-size: 9pt;
+  right: 3px;
+  font-size: 5pt;
   color: #555;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
