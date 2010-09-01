@@ -1,12 +1,8 @@
 - @page_title = "Events"
-%h1 Upcoming Events
-%div#upcoming_events
-  - @upcoming_events.each do |event|
-    %h2= event.title
-    %p= event.body
+%h1 Upcoming Events...
+#upcoming_events
+  = render(@upcoming_events)
 
-%h1 Past Events
-%div#past_events
-  - @past_events.each do |event|
-    %h2= event.title
-    %p= event.body
+%h1 Past Events...
+#past_events
+  = render(@past_events)
