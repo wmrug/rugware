@@ -4,6 +4,9 @@ class Event < ActiveRecord::Base
   validates_uniqueness_of :title, :case_sensitive => false
   
   validate :end_time_should_be_after_start_time
+
+  scope :past, where("events.start_time IS NOT NULL AND events.start_time <= now()").order("start_time DESC")
+  scope :upcoming, where("events.start_time IS NOT NULL AND events.start_time > now()").order("start_time ASC")
   
   private
   
