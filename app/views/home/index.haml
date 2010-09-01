@@ -1,6 +1,14 @@
 #banner
 
 #columns
+  #home_upcoming_events
+    %h1 Upcoming Events...
+    = render(@upcoming_events)
+
+  #home_past_events
+    %h1 Past Events...
+    = render(@past_events)
+
   #resources
     = render :partial => 'shared/resources'
 
