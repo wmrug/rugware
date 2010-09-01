@@ -18,7 +18,7 @@ namespace :rugware do
       start_month = Date.today - 3.months
       (0..5).each do |month_num|
         dt = start_month + month_num.months
-        meeting_time = Time.mktime(dt.year,dt.month,15,19,0,0)
+        meeting_time = Time.gm(dt.year,dt.month,15,19,0,0)
         Event.create!({
           :title => "WMRUG Meeting in #{Date::MONTHNAMES[meeting_time.month]} #{meeting_time.year}",
           :body => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
