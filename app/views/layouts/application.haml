@@ -5,6 +5,30 @@
   = javascript_include_tag :defaults
   = csrf_meta_tag
 %body
+  %p Hello World
+  <!-- Countdown dashboard start -->
+  #countdown_dashboard
+    .dash.weeks_dash
+      %span.dash_title weeks
+      .digit 0
+      .digit 0
+    .dash.days_dash
+      %span.dash_title days
+      .digit 0
+      .digit 0
+    .dash.hours_dash
+      %span.dash_title hours
+      .digit 0
+      .digit 0
+    .dash.minutes_dash
+      %span.dash_title minutes
+      .digit 0
+      .digit 0
+    .dash.seconds_dash
+      %span.dash_title seconds
+      .digit 0
+      .digit 0
+  <!-- Countdown dashboard end -->
   - if flash[:error]
     %div= flash[:error]
   -elsif flash[:success]
