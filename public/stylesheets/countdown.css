@@ -1,5 +1,13 @@
-#countdown_dashboard {
+#countdown_label, #countdown_dashboard {
   height: 55px;
+  float: left;
+  margin: 0;
+}
+
+#countdown_label {
+  margin-top: 8px;
+  color: #555;
+  margin-right: 5px;
 }
 
 .dash {

@@ -107,10 +107,10 @@
 			weeks = Math.floor(diffSecs/60/60/24/7);
 		}
 
-		$this.dashChangeTo(id, 'seconds_dash', secs, duration ? duration : 800);
-		$this.dashChangeTo(id, 'minutes_dash', mins, duration ? duration : 1200);
-		$this.dashChangeTo(id, 'hours_dash', hours, duration ? duration : 1200);
-		$this.dashChangeTo(id, 'days_dash', days, duration ? duration : 1200);
+		$this.dashChangeTo(id, 'seconds_dash', secs, duration ? duration : 400);
+		$this.dashChangeTo(id, 'minutes_dash', mins, duration ? duration : 600);
+		$this.dashChangeTo(id, 'hours_dash', hours, duration ? duration : 800);
+		$this.dashChangeTo(id, 'days_dash', days, duration ? duration : 1000);
 		$this.dashChangeTo(id, 'weeks_dash', weeks, duration ? duration : 1200);
 
 		$.data($this[0], 'diffSecs', diffSecs);
