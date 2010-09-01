@@ -14,3 +14,13 @@ Requirements
 
 See also:
 [Robby on Rails: Installing Ruby on Rails, Passenger, PostgreSQL, MySQL, Oh My Zsh on Snow Leopard, Fourth Edition](http://www.robbyonrails.com/articles/2010/02/08/installing-ruby-on-rails-passenger-postgresql-mysql-oh-my-zsh-on-snow-leopard-fourth-edition)
+
+Getting Started
+---------------
+
+Running rake rugware:dev:setup will create a user with the following details:
+
+**Username:** example@example.com
+**Password:** example
+
+It will also create a few example events around when you run the task
