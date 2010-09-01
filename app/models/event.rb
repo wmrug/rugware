@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
   
   validate :end_time_should_be_after_start_time
 
-  scope :past, where("events.start_time IS NOT NULL AND events.start_time <= now()")
+  scope :past, where("events.start_time IS NOT NULL AND events.start_time <= now()").order("start_time DESC")
   scope :upcoming, where("events.start_time IS NOT NULL AND events.start_time > now()")
   
   private
