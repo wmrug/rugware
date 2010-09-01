@@ -38,14 +38,6 @@
         %h1 WMRUG
       #nav
     = yield
-  :javascript
-    jQuery(document).ready(function() {
-      $('#countdown_dashboard').countDown({
-        targetDate: {
-          'day':    15, 'month':  9, 'year':   2010, 'hour':   7, 'min':    0, 'sec':    0
-        }
-      });
-  
-      $('#email_field').focus(email_focus).blur(email_blur);
-      $('#subscribe_form').bind('submit', function() { return false; });
-    });
+    = yield
+  %script{ :type => 'text/javascript'}
+    = countdown_script_for_next_event
