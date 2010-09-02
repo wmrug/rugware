@@ -39,4 +39,5 @@
         %h1 WMRUG
       #nav
     = yield
-  = countdown_script_for_next_event
+    %script{:type => 'text/javascript'}
+      = countdown_script_for_next_event
