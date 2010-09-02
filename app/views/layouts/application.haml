@@ -1,40 +1,41 @@
 !!! 5
 %head
   %title WMRUG - West Midlands Ruby User Group
-  = stylesheet_link_tag 'reset', 'application', 'countdown'
+  = stylesheet_link_tag 'reset', 'application'
   = javascript_include_tag :all
   = csrf_meta_tag
 %body
-  / Countdown dashboard start
-  %h2#countdown_label next meeting starts in
-  #countdown_dashboard
-    .dash.weeks_dash
-      %span.dash_title weeks
-      .digit 0
-      .digit 0
-    .dash.days_dash
-      %span.dash_title days
-      .digit 0
-      .digit 0
-    .dash.hours_dash
-      %span.dash_title hours
-      .digit 0
-      .digit 0
-    .dash.minutes_dash
-      %span.dash_title minutes
-      .digit 0
-      .digit 0
-    .dash.seconds_dash
-      %span.dash_title seconds
-      .digit 0
-      .digit 0
-  / Countdown dashboard end
   - if flash[:error]
     %div= flash[:error]
   -elsif flash[:success]
     %div= flash[:success]
   #content
     #header
+      / Countdown dashboard start
+      #countdown_dashboard
+        %p.countdown_label it's only
+        .dash.weeks_dash
+          %span.dash_title weeks
+          .digit 0
+          .digit 0
+        .dash.days_dash
+          %span.dash_title days
+          .digit 0
+          .digit 0
+        .dash.hours_dash
+          %span.dash_title hours
+          .digit 0
+          .digit 0
+        .dash.minutes_dash
+          %span.dash_title minutes
+          .digit 0
+          .digit 0
+        .dash.seconds_dash
+          %span.dash_title seconds
+          .digit 0
+          .digit 0
+        %p.countdown_label till the next event
+      / Countdown dashboard end
       #logo
         %h1 WMRUG
       #nav
