@@ -46,6 +46,11 @@ body{font-family:Verdana, Arial, "Helvetica Neue", sans-serif;text-align:center}
   letter-spacing: 1px;
 }
 
+#complete_info_message {
+  display: none;
+  float: right;
+}
+
 #nav {
   clear: both;
 }
