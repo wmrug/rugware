@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', :git => 'git://github.com/rails/rails.git', :tag => 'v3.0.0_RC'
+gem 'rails'
 gem 'pg'
 gem 'haml'
 gem 'devise'
