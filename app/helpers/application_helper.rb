@@ -1,6 +1,6 @@
 module ApplicationHelper
   def countdown_script_for_next_event
-    time = next_event_datetime
+    time = @next_event.start_time.to_a
     "//<![CDATA[
         jQuery(document).ready(function() {
           $('#countdown_dashboard').countDown({
@@ -18,8 +18,4 @@ module ApplicationHelper
       //]]>"
   end
   
-  private
-  def next_event_datetime
-    Event.upcoming.first.start_time.to_a
-  end
 end
