@@ -1,0 +1,28 @@
+/ Countdown dashboard start
+#complete_info_message
+  %p Today's event is underway.  Please refresh your browser to see when the next event is.
+#countdown_dashboard
+  %p.countdown_label it's only
+  .dash.weeks_dash
+    %span.dash_title weeks
+    .digit 0
+    .digit 0
+  .dash.days_dash
+    %span.dash_title days
+    .digit 0
+    .digit 0
+  .dash.hours_dash
+    %span.dash_title hours
+    .digit 0
+    .digit 0
+  .dash.minutes_dash
+    %span.dash_title minutes
+    .digit 0
+    .digit 0
+  .dash.seconds_dash
+    %span.dash_title seconds
+    .digit 0
+    .digit 0
+  %p.countdown_label till the next event
+  %p= Event.upcoming.first.title
+/ Countdown dashboard end
