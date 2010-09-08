@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
   
+  before_filter :get_next_event
+  
+  def get_next_event
+    @next_event = Event.upcoming.first
+  end
+  
 end
