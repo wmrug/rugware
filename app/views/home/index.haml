@@ -1,5 +1,16 @@
 #banner
-
+  - images = ['photo1.jpg', 'photo2.jpg']
+  - Event.all[0..4].each do |e|
+    = image_tag "meetup_photos/#{e.image}"
+%script
+  $('#banner').before('<div id="nav">').cycle({ 
+  fx:     'fade', 
+  speed:   300, 
+  timeout: 3000, 
+  next:   '#banner', 
+  pager:  '#nav',
+  pause:   1 
+  });
 #columns
   #home_upcoming_events
     %h1 Upcoming Events...

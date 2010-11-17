@@ -1,6 +1,6 @@
 module ApplicationHelper
   def countdown_script_for_next_event
-    time = @next_event.start_time.to_a
+    time = @next_event.start_time.to_time.to_a
     "<script type=\"text/javascript\">
       //<![CDATA[
           jQuery(document).ready(function() {
@@ -13,7 +13,7 @@ module ApplicationHelper
                 $('#complete_info_message').slideDown(),
                 $('.countdown_label').fadeOut()
               }
-            
+          
             });
           });
         //]]>

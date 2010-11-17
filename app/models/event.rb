@@ -8,6 +8,10 @@ class Event < ActiveRecord::Base
   scope :past, where("events.start_time IS NOT NULL AND events.start_time <= now()").order("start_time DESC")
   scope :upcoming, where("events.start_time IS NOT NULL AND events.start_time > now()").order("start_time ASC")
   
+  def image
+    ['photo1.jpg', 'photo2.jpg'][rand(2)]
+  end
+  
   private
   
     def end_time_should_be_after_start_time
