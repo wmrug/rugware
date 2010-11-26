@@ -27,13 +27,18 @@ It will also create a few example events around when you run the task
 
 run:
 rake db:create:all
+
 rake db:migrate
+
 rails s
+
 and browse to http://localhost:3000
 
 For Ubuntu users
 ----------------
-If rake rugware:dev:setup fails /etc/postgresql/8.4/main/pga_hba.conf
+If rake rugware:dev:setup fails edit /etc/postgresql/8.4/main/pga_hba.conf
+
 so that the local line reads:
+
 local	all	all	trust
 
