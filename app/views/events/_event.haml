@@ -1,4 +1,4 @@
 .event
   %h3= formatted_title(event)
   .moreInfo= link_to "see more info", event_path(event)
-  %p= event.summary
+  %p=raw(event.summary)

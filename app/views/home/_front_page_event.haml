@@ -1,4 +1,4 @@
 .event
   %h3= front_page_event.title
   .moreInfo= link_to "see more info", event_path(front_page_event)
-  %p= front_page_event.summary(144)
+  %p=raw( front_page_event.summary(144))

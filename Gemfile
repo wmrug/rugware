@@ -6,7 +6,6 @@ gem 'haml'
 gem 'devise'
 gem 'cancan'
 gem 'jquery-rails', '>= 0.2.6'
-
 group :test do
   gem 'shoulda'
   gem 'factory_girl'
