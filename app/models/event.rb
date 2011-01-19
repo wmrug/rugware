@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
   scope :upcoming, where("events.start_time IS NOT NULL AND events.start_time > now()").order("start_time ASC")
   
   def image
-    ['photo1.jpg', 'photo2.jpg'][rand(2)]
+    ['sample1.jpeg', 'sample2.jpeg'][rand(2)]
   end
   
   private
