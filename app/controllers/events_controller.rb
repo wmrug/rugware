@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   
   def create
     @event = Event.new(params[:event])
-    if @event.save
+    if @event.save!
       redirect_to @event
     else
       flash.now[:error] = "Something went wrong"

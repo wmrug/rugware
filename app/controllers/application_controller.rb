@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     @next_event = Event.upcoming.first
   end
   
+  def has_banner 
+    @banner = true
+  end
+  
 end

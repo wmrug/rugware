@@ -1,3 +1,4 @@
-%h2= formatted_title(event)
-%p= event.body
-.more-info= link_to "see more info", event_path(event)
+.event
+  %h3= formatted_title(event)
+  .moreInfo= link_to "see more info", event_path(event)
+  %p= event.summary

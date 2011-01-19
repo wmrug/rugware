@@ -1,35 +1,7 @@
-#banner    
-  #slideShowBox
-    #slides
-      - images = ['photo1.jpg', 'photo2.jpg']
-      - events = Event.all[0..4]
-      - events.each_with_index do |event, index|
-        .slide{:style => index == 0 ? "" : "display:none", :id => index}
-          .slideShowImage
-            = image_tag "meetup_photos/#{event.image}"
-          .slideShowOverlay
-            .slideDetails
-              .infoTitle
-                =link_to event.title,link_to("next event", event_path(@next_event)) if @next_event
-              .infoDetails
-                =# "#{img.when_info} added by #{link_to img.user.login, user_path(img.user)}"
-            .slideNavigation
-              %ul#pager
-                - events.size.times do |i|
-                  %li{:class => i == index ? "current" : "", :id => "slideLink#{i}", :onclick => "$('#slides').cycle(#{i})"}
-                    = link_to i + 1, "#" 
-              .clear
-  .clear
-#columns
-  #home_upcoming_events
-    %h1 Upcoming Events...
-    = render(@upcoming_events)
+#home_upcoming_events.column
+  %h1 Upcoming Events...
+  = render :partial => "front_page_event", :collection => @upcoming_events
 
-  #home_past_events
-    %h1 Past Events...
-    = render(@past_events)
-
-  #resources
-    = render :partial => 'shared/resources'
-
-.clear
+#home_past_events.column
+  %h1 Past Events...
+  = render :partial => "front_page_event", :collection => @past_events

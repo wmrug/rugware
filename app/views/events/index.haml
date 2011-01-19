@@ -1,8 +1,9 @@
-- @page_title = "Events"
-%h1 Upcoming Events...
-#upcoming_events
-  = render(@upcoming_events)
+#eventContent
+  - @page_title = "Events"
+  %h1 Upcoming Events...
+  #upcoming_events
+    = render(@upcoming_events)
 
-%h1 Past Events...
-#past_events
-  = render(@past_events)
+  %h1 Past Events...
+  #past_events
+    = render(@past_events)

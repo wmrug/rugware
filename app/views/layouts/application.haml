@@ -14,7 +14,45 @@
     #header
       != render :partial => "shared/countdown"
       #logo
+        = image_tag "ruby.png"
         %h1 WMRUG
+        %h5 West Midlands Ruby User Group
       #nav
-    = yield
+        = link_to "Home", root_path
+        |
+        = link_to "Events", events_path
+        |
+        = link_to "About Us", "#"
+    - if @banner
+      #banner    
+        #slideShowBox
+          #slides
+            - photos = Photo.all[0..4]
+            - photos.each_with_index do |photo, index|
+              .slide{:style => index == 0 ? "" : "display:none", :id => index}
+                .slideShowImage
+                  = image_tag photo.url
+                .slideShowOverlay
+                  .slideDetails
+                    .infoTitle
+                      - if photo.event
+                        = link_to(photo.title, event_path(photo.event))
+                      - else 
+                        = photo.title
+                    .infoDetails
+                      = photo.description
+                  .slideNavigation
+                    %ul#pager
+                      - photos.size.times do |i|
+                        %li{:class => i == index ? "current" : "", :id => "slideLink#{i}", :onclick => "$('#slides').cycle(#{i})"}
+                          = link_to i + 1, "#" 
+                    .clear
+      .clear
+    #columns
+      #mainColumn
+        = yield
+      #resources.column
+        = render :partial => 'shared/resources'
+      .clear
+    .clear
     != countdown_script_for_next_event
