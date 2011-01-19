@@ -10,6 +10,52 @@ body
 .clear
   clear: both  
 
+#countdown_dashboard
+  :height 55px
+  :float right
+  :padding-bottom 10px
+  
+.countdown_label 
+  :float left
+  :color #555
+  :margin-left 10px
+  :padding-top 17px
+	
+.dash
+  :width 55px
+  :height 57px
+  :background transparent url('../images/countdown/dash_small.png') 0 0 no-repeat
+  :float left
+  :margin-left 10px
+  :position relative
+  
+  .digit 
+    :font-size 27pt
+    :font-weight bold
+    :float left
+    :text-align center
+    :font-family Times
+    :color #555
+    :position relative
+
+.dash_title
+  :position absolute
+  :display block
+  :bottom 0px
+  :right 3px
+  :font-size 5pt
+  :color #555
+  :text-transform uppercase
+  :letter-spacing 1px
+
+#complete_info_message 
+  display: none
+  float: right
+
+
+#nav 
+  clear: both
+
 #content
   width: 960px
   margin: 20px auto
@@ -44,3 +90,66 @@ body
       list-style-image: url(/images/icons/linkedin.png)      
     li.rugs
       list-style-image: url(/images/icons/ruby.png)
+
+#slideShowBox
+  :width 950
+  :height 300px
+  :float left
+  :background #FFFFFF url(/images/slideShowFrame.jpg) no-repeat
+  :margin-bottom 20px
+  :position relative
+  .slideShowImage
+    :width 940px
+    :height 288px
+    :overflow hidden
+    :position relative
+    :background-position center center
+    :margin 6px
+    img
+      :width 940px
+      :position absolute
+      :bottom 0px
+      :left 0px
+  .slideShowOverlay
+    :z-index 4
+    :width 900px
+    :position absolute
+    :bottom 16px
+    :left 16px
+    :background-image url(/images/overlay_bg.png)
+    .slideDetails
+      :float left
+      :width 800px
+      :margin 10px
+      :line-height 18px
+      :text-align left
+      .infoDetails
+        :color #dddddd
+    .slideNavigation
+      :position absolute
+      :bottom 10px
+      :right 10px
+      ul
+        :list-style none
+        :float right
+        :width 120px
+        li
+          :display inline
+          :float left
+          :width 20px
+          :margin-left 2px
+          :height 20px
+          :background-image url(/images/overlay_bg.png)
+          a
+            :line-height 20px
+            :text-decoration none
+        li:hover
+          :background-image none
+          //:background-color= !light_accent
+          a
+            :color #ffffff
+        .current
+          :background-image none
+          //:background-color= !dark_accent
+          a
+            :color #ffffff
