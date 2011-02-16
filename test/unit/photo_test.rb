@@ -7,5 +7,5 @@ class PhotoTest < ActiveSupport::TestCase
   should validate_presence_of(:description)
   should validate_presence_of(:title)
   should validate_presence_of(:date)
-  should validate_presence_of(:path)
+  should validate_presence_of(:url)
 end
