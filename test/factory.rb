@@ -10,3 +10,10 @@ Factory.define :user do |u|
   u.password "password"
   u.password_confirmation "password"
 end
+
+Factory.define :photo do |p|
+  p.title "Photo"
+  p.description "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  p.date Date.today
+  p.url "http://google.co.uk/images/logos/ps_logo2.png"
+end
