@@ -13,16 +13,14 @@
   #content
     #header
       != render :partial => "shared/countdown"
-      #logo
-        = image_tag "ruby.png"
-        %h1 WMRUG
-        %h5 West Midlands Ruby User Group
-      #nav
-        = link_to "Home", root_path
-        |
-        = link_to "Events", events_path
-        |
-        = link_to "About Us", "#"
+    #logo
+      = image_tag "ruby.png"
+      %h1 WMRUG
+      %h5 West Midlands Ruby User Group
+      %ul#nav
+        %li= link_to "Home", root_path, :class=>"current"
+        %li= link_to "Events", events_path
+        %li= link_to "About Us", "about_us"
     - if @banner
       #banner    
         #slideShowBox
@@ -51,8 +49,12 @@
     #columns
       #mainColumn
         = yield
-      #resources.column
+      #resources
         = render :partial => 'shared/resources'
       .clear
     .clear
+  .clear
+  #footer
+    %p &copy 2011 WMRUG
     != countdown_script_for_next_event
+  .clear

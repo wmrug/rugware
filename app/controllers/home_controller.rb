@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @past_events     = Event.past[0..2]
     @upcoming_events = Event.upcoming[0..2]
   end
+  
+  def about_us
+    @banner = false
+  end
 end

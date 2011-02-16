@@ -12,6 +12,8 @@ Rugware::Application.routes.draw do
     end
   end
   
+  match "about_us", :to  => "home#about_us"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

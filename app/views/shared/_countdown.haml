@@ -23,5 +23,5 @@
     %span.dash_title seconds
     .digit 0
     .digit 0
-  %p.countdown_label till the #{(link_to("next event", event_path(@next_event)) if @next_event)}
+  %p.countdown_label till the #{(link_to("next event!", event_path(@next_event)) if @next_event)}
 / Countdown dashboard end
